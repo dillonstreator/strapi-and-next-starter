@@ -1,0 +1,26 @@
+{
+  "name": "strapi-and-next-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd frontend && npm run develop\" \"cd backend && npm run develop\"",
+    "installall": "concurrently \"cd frontend && npm install\" \"cd backend && npm install\"",
+    "rm:caches": "concurrently \"cd frontend && rimraf .next\" \"cd backend && rimraf .cache .tmp exports build\"",
+    "rm:node_modules": "concurrently \"cd frontend && rimraf node_modules\" \"cd backend && rimraf node_modules\" && rimraf node_modules",
+    "nuke": "npm run rm:caches && npm run rm:node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DillonStreator/strapi-and-next-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DillonStreator/strapi-and-next-starter/issues"
+  },
+  "homepage": "https://github.com/DillonStreator/strapi-and-next-starter#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+    position: relative;
+    nav {
+        @include heightWidth(75px, 100%);
+        @include displayFlex();
+        @include displayFlexJustifyAlign(space-between, center);
+    }
+    .main-menu {
+        @include heightWidth(100vh, 30%);
+        min-width: 80%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        flex-direction: column;
+        transition: 400ms ease-in-out;
+        z-index: $overlay-index + 1;
+
+        &.main-menu_open {
+            transform: translateX(0%);
+            box-shadow: 10px 0px 30px 0px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+        }
+        &.main-menu_closed {
+            transform: translateX(-101%);
+            opacity: 0;
+        }
+        @media (min-width: map-get($breakpoints, "tablet-min")) {
+            min-width: 30%;
+        }
+        .top {
+            @include displayFlex();
+            @include displayFlexJustifyAlign(space-between, center);
+
+            & button {
+                & svg {
+                    font-size: 2rem;
+                }
+            }
+        }
+        ul.menu {
+            list-style: none;
+            padding: 0;
+        }
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 15px;
+    }
+}

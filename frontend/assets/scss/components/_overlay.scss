@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the overlay component.
+// -----------------------------------------------------------------------------
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $overlay-index;
+    min-width: 100vw;
+    min-height: 100vh;
+}
